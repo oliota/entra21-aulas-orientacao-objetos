@@ -7,62 +7,98 @@ import br.com.entra21.orientacao.objetos.principal.aula01.classes.Professor;
 public class Main {
 
 	// o objeto da classe Scanner esta na variavel de entrada, então é um obj
-	//porem o System.in é uma chamada static pq
-	//para acessar o in do System nao precisei dar new
+	// porem o System.in é uma chamada static pq
+	// para acessar o in do System nao precisei dar new
 	static Scanner entrada = new Scanner(System.in);
-	static Scanner entrada2 = new Scanner(System.in);
+
 	public static void main(String[] args) {
 
-		
-		Professor professorJava = new Professor();
-		 
-		Professor professoraIngles = new Professor("Isabelle", (byte) 30);
+		byte opcao;
+		System.out.println("aprendendo sobre orientação a objetos");
 
-		System.out.println("Nome dela = "+professoraIngles.getNome());
-		
-		professoraIngles.setNome("Isabelle 2");
+		do {
+			System.out.println("Escolha uma opção");
+			System.out.println("0 - Sair");
+			System.out.println("1 - Classes e objetos");
+			System.out.println("2 - Herança");
+			opcao = entrada.nextByte();
 
-		System.out.println("agora o nome  dela = "+professoraIngles.getNome());
-		System.out.println("A idade dela é "+professoraIngles.getIdade());
-		
-		System.out.println("Os professoes trabalham na "+Professor.instituicao);
+			switch (opcao) {
+			case 0:
 
-		Aluno alunoTeste= new Aluno(); 
-		
-		Aluno outroAluno= new Aluno();
-		
-		Aluno alunoNovato=new Aluno();
-		
-		Aluno alunoObjeto ;
-		
-		alunoObjeto= new Aluno();
-		
-		alunoObjeto.idade=18;
-		
-		 
-		alunoTeste.nome="Rubem";
-		alunoTeste.idade=33;
-		
-		outroAluno.idade=18;
-		outroAluno.nome="Visitante";
+				break;
+			case 1:
+				aprenderClasses();
+				break;
+			case 2:
+				aprenderHeranca();
+				break;
 
-		alunoTeste.responderChamada();
-		alunoTeste.responderChamada();
-		alunoTeste.responderChamada();
-		alunoTeste.responderChamada();
-		
-		/*
-		 * System.out.println("Qual o nome do aluno novato?");
-		 * alunoNovato.nome=entrada.next();
-		 * 
-		 * System.out.println("Qual a idade do "+alunoNovato.nome+"?");
-		 * alunoNovato.idade=entrada.nextByte();
-		 * 
-		 * System.out.println("Bem vindo "+alunoNovato.nome);
-		 */
-		
-		
+			default:
+				break;
+			}
+
+		} while (opcao != 0);
 
 	}
 
+	private static void aprenderClasses() {
+		// instanciando um objeto da classe Professor na variavel professorJava
+		Professor professorJava = new Professor();
+
+		// instanciando um objeto da classe Professor na variavel professoraIngles
+		Professor professoraIngles = new Professor("Isabelle", (byte) 30);
+
+		// Acessando os atributos com encapsulamento
+		System.out.println("Nome dela = " + professoraIngles.getNome());
+		professoraIngles.setNome("Isabelle 2");
+		System.out.println("agora o nome  dela = " + professoraIngles.getNome());
+		System.out.println("A idade dela é " + professoraIngles.getIdade());
+
+		// Acessando o atributo estático da Classe Professor, atributos estáticos ou
+		// metodos estatico não pertencem aos objetos da Classe
+		// dessa forma é possivel acessar em a necessidade de criar um objeto com new
+		System.out.println("Os professoes trabalham na " + Professor.instituicao);
+
+		// Criando varios objetos da classe Aluno nas variaveis
+		// cada variavel é independente e possui seus atributos e metodos
+		Aluno alunoTeste = new Aluno();
+		Aluno outroAluno = new Aluno();
+		Aluno alunoNovato = new Aluno();
+		Aluno alunoObjeto;
+		alunoObjeto = new Aluno();
+
+		// as alterações aqui só afetam esse objeto
+		alunoObjeto.idade = 18;
+
+		// as alterações aqui só afetam esse objeto
+		alunoTeste.nome = "Rubem";
+		alunoTeste.idade = 33;
+
+		// as alterações aqui só afetam esse objeto
+		outroAluno.idade = 18;
+		outroAluno.nome = "Visitante";
+
+		// Executando varias vezes o metodo desse objeto
+		alunoTeste.responderChamada();
+		alunoTeste.responderChamada();
+		alunoTeste.responderChamada();
+		alunoTeste.responderChamada();
+
+		// Interagindo com o usuario para preencher os atributos do Aluno que ainda não
+		// tem encapsulamento
+		System.out.println("Qual o nome do aluno novato?");
+		alunoNovato.nome = entrada.next();
+
+		System.out.println("Qual a idade do " + alunoNovato.nome + "?");
+		alunoNovato.idade = entrada.nextByte();
+
+		System.out.println("Bem vindo " + alunoNovato.nome);
+
+	}
+
+	private static void aprenderHeranca() {
+		 //aprender herança
+
+	}
 }
