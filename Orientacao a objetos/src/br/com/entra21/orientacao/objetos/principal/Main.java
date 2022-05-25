@@ -6,6 +6,10 @@ import br.com.entra21.orientacao.objetos.principal.aula01.classes.Professor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Diretor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Funcionario;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Pessoa;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Atleta;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Gamer;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Nadador;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Velocista;
 
 public class Main {
 
@@ -24,6 +28,7 @@ public class Main {
 			System.out.println("0 - Sair");
 			System.out.println("1 - Classes e objetos");
 			System.out.println("2 - Herança");
+			System.out.println("3 - Polimorfismo");
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
@@ -36,6 +41,9 @@ public class Main {
 			case 2:
 				aprenderHeranca();
 				break;
+			case 3:
+				aprenderPolimorfismo();
+				break;
 
 			default:
 				break;
@@ -44,6 +52,8 @@ public class Main {
 		} while (opcao != 0);
 
 	}
+
+
 
 	private static void aprenderClasses() {
 		
@@ -117,4 +127,22 @@ public class Main {
 		funcionario2.getCpf();
 
 	}
+
+	private static void aprenderPolimorfismo() {
+		Atleta atleta = new Atleta();
+		Gamer gamer = new Gamer();
+		Velocista velocista = new Velocista();
+		Nadador nadador = new Nadador();
+		
+
+		atleta.agradecerVitoria();
+		System.out.println("---------------");
+		gamer.agradecerVitoria();
+		System.out.println("---------------");
+		velocista.agradecerVitoria();
+		System.out.println("---------------");
+		nadador.agradecerVitoria();
+		
+	}
+	
 }
