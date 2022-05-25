@@ -3,6 +3,9 @@ package br.com.entra21.orientacao.objetos.principal;
 import java.util.Scanner;
 import br.com.entra21.orientacao.objetos.principal.aula01.classes.Aluno;
 import br.com.entra21.orientacao.objetos.principal.aula01.classes.Professor;
+import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Diretor;
+import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Funcionario;
+import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Pessoa;
 
 public class Main {
 
@@ -43,6 +46,19 @@ public class Main {
 	}
 
 	private static void aprenderClasses() {
+		
+		Pessoa pessoa1 = new Pessoa();
+
+		Diretor diretor1= new Diretor("Paulo",(byte )80,"08938491212","Entra21",(byte)10);
+		diretor1.setNome("Paulo"); 
+		
+		Funcionario funcionario1= new Funcionario();
+		funcionario1.setIdade((byte)22);
+		funcionario1.setObservacao("novato");
+		
+		Funcionario funcionario2 = new Funcionario("Fulano", (byte) 18, "07821199901", "Junin", 4000.05f);
+		funcionario2.getCpf();
+		
 		// instanciando um objeto da classe Professor na variavel professorJava
 		Professor professorJava = new Professor();
 
