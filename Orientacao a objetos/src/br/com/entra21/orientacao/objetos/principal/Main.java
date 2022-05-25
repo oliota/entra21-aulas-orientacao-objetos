@@ -33,7 +33,7 @@ public class Main {
 
 			switch (opcao) {
 			case 0:
-
+				System.out.println("Saindo");
 				break;
 			case 1:
 				aprenderClasses();
@@ -53,12 +53,8 @@ public class Main {
 
 	}
 
-
-
 	private static void aprenderClasses() {
-		
-		
-		
+
 		// instanciando um objeto da classe Professor na variavel professorJava
 		Professor professorJava = new Professor();
 
@@ -116,13 +112,13 @@ public class Main {
 	private static void aprenderHeranca() {
 		Pessoa pessoa1 = new Pessoa();
 
-		Diretor diretor1= new Diretor("Paulo",(byte )80,"08938491212","Entra21",(byte)10);
-		diretor1.setNome("Paulo"); 
-		
-		Funcionario funcionario1= new Funcionario();
-		funcionario1.setIdade((byte)22);
+		Diretor diretor1 = new Diretor("Paulo", (byte) 80, "08938491212", "Entra21", (byte) 10);
+		diretor1.setNome("Paulo");
+
+		Funcionario funcionario1 = new Funcionario();
+		funcionario1.setIdade((byte) 22);
 		funcionario1.setObservacao("novato");
-		
+
 		Funcionario funcionario2 = new Funcionario("Fulano", (byte) 18, "07821199901", "Junin", 4000.05f);
 		funcionario2.getCpf();
 
@@ -133,7 +129,6 @@ public class Main {
 		Gamer gamer = new Gamer();
 		Velocista velocista = new Velocista();
 		Nadador nadador = new Nadador();
-		
 
 		atleta.agradecerVitoria();
 		System.out.println("---------------");
@@ -142,7 +137,7 @@ public class Main {
 		velocista.agradecerVitoria();
 		System.out.println("---------------");
 		nadador.agradecerVitoria();
-		
+
 	}
-	
+
 }

@@ -4,8 +4,8 @@ public class Atleta {
 	
 	private String nome;
 	private byte idade;
-	private short quantidadeVitorias;
-	private byte quantidadeDerrotas; 
+	private int quantidadeVitorias;
+	private int quantidadeDerrotas; 
 	
 	public Atleta() {
 		super();
@@ -35,23 +35,24 @@ public class Atleta {
 		this.idade = idade;
 	}
 
-	public short getQuantidadeVitorias() {
+	public int getQuantidadeVitorias() {
 		return quantidadeVitorias;
 	}
 
-	public void setQuantidadeVitorias(short quantidadeVitorias) {
+	public void setQuantidadeVitorias(int quantidadeVitorias) {
 		this.quantidadeVitorias = quantidadeVitorias;
 	}
 
-	public byte getQuantidadeDerrotas() {
+	public int getQuantidadeDerrotas() {
 		return quantidadeDerrotas;
 	}
 
-	public void setQuantidadeDerrotas(byte quantidadeDerrotas) {
+	public void setQuantidadeDerrotas(int quantidadeDerrotas) {
 		this.quantidadeDerrotas = quantidadeDerrotas;
 	}
 	
 	public void agradecerVitoria() {
+		setQuantidadeVitorias(getQuantidadeVitorias()+1);
 		System.out.println("Obrigado meu DEUS!!!");
 	}
  
