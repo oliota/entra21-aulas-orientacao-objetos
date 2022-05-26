@@ -10,6 +10,9 @@ import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Atleta;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Gamer;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Nadador;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Velocista;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Gato;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Humano;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Pato;
 
 public class Main {
 
@@ -44,6 +47,12 @@ public class Main {
 			case 3:
 				aprenderPolimorfismo();
 				break;
+			case 4:
+				aprenderConceitosPOO();
+				break;
+			case 5:
+				aprenderInterfaces();
+				break;
 
 			default:
 				break;
@@ -53,6 +62,7 @@ public class Main {
 
 	}
 
+	
 	private static void aprenderClasses() {
 
 		// instanciando um objeto da classe Professor na variavel professorJava
@@ -139,5 +149,32 @@ public class Main {
 		nadador.agradecerVitoria();
 
 	}
+	private static void aprenderConceitosPOO() {
+		System.out.println("Verifique as classes do pacote da aula 4 conceitos POO"); 
+		
+	}
+	private static void aprenderInterfaces() {
+		Humano pessoa= new Humano();
+		pessoa.setNome("Fulano");
+		pessoa.alimentar("macarrão");
+		pessoa.alimentar("arroz");
+		pessoa.comunicar("Boa noite, interface é muito fácil");
+		pessoa.locomover();
+		
+
+		Gato vezu= new Gato(); 
+		vezu.alimentar("peixe");
+		vezu.alimentar("ração");
+		vezu.comunicar("Será que existem gatos programadores?");
+		vezu.locomover();
+		
+
+		Pato patolino= new Pato(); 
+		patolino.alimentar("peixe"); 
+		patolino.comunicar("Será que existem gatos programadores?");
+		patolino.locomover();
+	}
+
+	
 
 }
