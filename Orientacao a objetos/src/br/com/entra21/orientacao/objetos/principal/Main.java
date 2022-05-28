@@ -10,9 +10,11 @@ import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Atleta;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Gamer;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Nadador;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Velocista;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Aviao;
 import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Gato;
 import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Humano;
 import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Pato;
+import br.com.entra21.orientacao.objetos.principal.aula05.revisao.Revisao;
 
 public class Main {
 
@@ -31,7 +33,10 @@ public class Main {
 			System.out.println("0 - Sair");
 			System.out.println("1 - Classes e objetos");
 			System.out.println("2 - Herança");
-			System.out.println("3 - Polimorfismo");
+			System.out.println("3 - Polimorfismo com herança");
+			System.out.println("4 - Conceitos POO");
+			System.out.println("5 - Polimorfismo com interface");
+			System.out.println("6 - Revisão");
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
@@ -53,6 +58,9 @@ public class Main {
 			case 5:
 				aprenderInterfaces();
 				break;
+			case 6:
+				revisarPOO();
+				break;
 
 			default:
 				break;
@@ -63,6 +71,9 @@ public class Main {
 	}
 
 	
+	
+
+
 	private static void aprenderClasses() {
 
 		// instanciando um objeto da classe Professor na variavel professorJava
@@ -173,8 +184,20 @@ public class Main {
 		patolino.alimentar("peixe"); 
 		patolino.comunicar("Será que existem gatos programadores?");
 		patolino.locomover();
+		
+		Aviao comercial= new Aviao();
+		comercial.setModelo("Boeing 737");
+		System.out.println(comercial.freiar());
+		comercial.acelerar(870.5f);
+		System.out.println(comercial.getVelocidadeAtual());
 	}
 
+	private static void revisarPOO() {
+
+		Revisao.revisar();
+		 
+		
+	}
 	
 
 }
