@@ -17,3 +17,7 @@ Repositório com as práticas realizadas em aula
 |------|---------|
 |Aula 01 - 01|Classes, objetos , encapsulamento e acesso estático
 |Aula 02 - 01|Herança                                     
+|Aula 03 - 01|Polimorfismo com herança                                
+|Aula 04 - 01|Conceitos POO                               
+|Aula 04 - 02|Polimorfismo com interface                               
+|Aula 05 - 01|Prática com todos os assuntos (sistema de dossiês)                                  
